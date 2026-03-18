@@ -72,9 +72,26 @@ function processCheckout() {
     const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
     
     if (paymentMethod === 'cod') {
-        alert("Thank you for your order! You will pay via Cash on Delivery.");
+        alert("Thank you for your order! Your order information will be sent via email.");
         // Clear cart after order
         cart = [];
         renderCart();
     }
+}
+
+// --- MODAL POPUP LOGIC ---
+
+// Function to open the image modal
+function openModal(imgSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    
+    modalImg.src = imgSrc;
+    modal.classList.add('show-modal');
+}
+
+// Function to close the image modal
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('show-modal');
 }
