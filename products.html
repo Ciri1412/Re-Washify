@@ -20,25 +20,18 @@
         </nav>
     </header>
 
-    <section class="products-hero">
-        <div class="products-hero-inner">
-            <div class="products-hero-copy">
-                <h2>Refill, Reuse, Re: Washify</h2>
-                <p>Premium hypoallergenic detergents and gentle dishwashing liquids in durable, refillable bottles. Save money, cut plastic waste, and support inclusive employment with every purchase.</p>
-            </div>
-            <div class="products-hero-visual">
-                <img src="https://images.unsplash.com/photo-1617957538716-2b861d2ed4bb?auto=format&fit=crop&w=1200&q=80" alt="Refill station with reusable bottles" class="products-hero-img">
-            </div>
-        </div>
-    </section>
-
     <div class="store-layout">
         <div>
             <h2>Shop Re:Washify Refills</h2>
             <div class="products-grid">
                 
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1610555356070-d1fb336f13bc?auto=format&fit=crop&w=600&q=80" alt="Laundry Detergent" class="product-img">
+                    <div class="product-image-wrapper">
+                        <img src="./assets/img/Liquid Laundry Detergent (Starter Kit).png" alt="Laundry Detergent" class="product-img">
+                        <button class="magnify-icon" onclick="openModal(this.previousElementSibling.src)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>
                     <div class="product-info">
                         <h3>Liquid Laundry Detergent (Starter Kit)</h3>
                         <p>Hypoallergenic and highly effective in cold water.</p>
@@ -55,7 +48,12 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=600&q=80" alt="Dishwashing Liquid" class="product-img">
+                    <div class="product-image-wrapper">
+                        <img src="./assets/img/Dishwashing Liquid (Starter Kit).png" alt="Dishwashing Liquid" class="product-img">
+                        <button class="magnify-icon" onclick="openModal(this.previousElementSibling.src)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>
                     <div class="product-info">
                         <h3>Dishwashing Liquid (Starter Kit)</h3>
                         <p>Grease-cutting formula that is exceptionally gentle on your skin.</p>
@@ -72,7 +70,12 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1605335952213-43da2345094d?auto=format&fit=crop&w=600&q=80" alt="Refill Liquid" class="product-img">
+                    <div class="product-image-wrapper">
+                        <img src="./assets/img/Refill Only (Liquid).png" alt="Refill Liquid" class="product-img">
+                        <button class="magnify-icon" onclick="openModal(this.previousElementSibling.src)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>
                     <div class="product-info">
                         <h3>Refill Only (Liquid)</h3>
                         <p>Top up your own bottle. Choose detergent or dishwashing.</p>
@@ -89,7 +92,12 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1595232924151-54c601736932?auto=format&fit=crop&w=600&q=80" alt="Empty Bottles" class="product-img">
+                    <div class="product-image-wrapper">
+                        <img src="./assets/img/Empty Reusable Bottles.png" alt="Empty Bottles" class="product-img">
+                        <button class="magnify-icon" onclick="openModal(this.previousElementSibling.src)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>
                     <div class="product-info">
                         <h3>Empty Reusable Bottles</h3>
                         <p>Purchase a sanitized, durable empty bottle.</p>
@@ -138,6 +146,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img id="modalImg" class="modal-image" src="">
     </div>
 
     <script src="cart.js"></script>
